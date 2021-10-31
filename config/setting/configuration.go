@@ -19,17 +19,17 @@ type AppConfig struct {
 
 func GetConfig() *AppConfig {
 	var defaultConfig AppConfig
-	defaultConfig.Port = 8000
+	defaultConfig.Port = 9000
 	defaultConfig.Database.Driver = "mysql"
 	defaultConfig.Database.Name = "buku"
 	defaultConfig.Database.Address = "localhost"
 	defaultConfig.Database.Port = 3306
 	defaultConfig.Database.Username = "root"
-	defaultConfig.Database.Password = "gconus5226"
+	defaultConfig.Database.Password = "12345"
 
 	viper.SetConfigType("yaml")
 	viper.SetConfigName("config")
-	viper.AddConfigPath("./config/")
+	viper.AddConfigPath("./setting/")
 
 	if err := viper.ReadInConfig(); err != nil {
 		// log.Info("error to load config file, will use default value ", err)
