@@ -45,7 +45,6 @@ func (m *GormAuthorModel) Edit(newAuthor models.Author, authorId int) (models.Au
 	}
 	author.Name = newAuthor.Name
 	author.Sex = newAuthor.Sex
-	author.DoB = newAuthor.DoB
 	author.Email = newAuthor.Email
 	author.Password = newAuthor.Password
 
